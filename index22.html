@@ -3,104 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ตัวอย่าง HTML คล้ายในเว็บไซต์</title>
+    <title>BB imformation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
-
-        .container {
+        header {
+            background-color: #78AAC3;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            background-color: #CAF3F5;
+            padding: 10px;
+        }
+        nav a {
+            color: #000080;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #97C8D6;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
             width: 100%;
-            margin: 0 auto;
-            padding: 20px;
-            box-sizing: border-box;
+            bottom: 0;
         }
 
-        .header {
-            background-color: #333;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
+        /* กำหนดรูปแบบของ <div> */
+            html, body {
+            height: 100%;
+            margin: 0;
         }
 
-        .content {
+        .box1 {
+            width: 10%;
+            height: 50px;
+            background: pink;
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .box {
-            width: 48%;
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-
-        .box:hover {
-            transform: translateY(-10px);
-        }
-
-        .footer {
-            background-color: #333;
-            color: white;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 15px 0;
-            margin-top: 20px;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            transition: width 1s;
+            -moz-transition: width 1s; /* Firefox 4 */
+            -webkit-transition: width 1s; /* Safari and Chrome */
+            -o-transition: width 1s; /* Opera */
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .box {
-                width: 100%;
-            }
+        .box1:hover {
+            width: 100%;
+        
+
         }
+
+        /* ใช้ ::before เพื่อกำหนดข้อความเริ่มต้น */
+        .box1::before {
+            content: "Name";
+        }
+
+        /* เปลี่ยนข้อความเมื่อ hover */
+        .box1:hover::before {
+            content: "are you in there";
+        }
+
+        
+        /* กำหนดรูปแบบของ <div> */
+            .box2 {
+            width: 20%;
+            height: 30%;
+            background: pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            transition: width 1s;
+            -moz-transition: width 1s; /* Firefox 4 */
+            -webkit-transition: width 1s; /* Safari and Chrome */
+            -o-transition: width 1s; /* Opera */
+        }
+
+        .box2:hover {
+            width: 100%;
+        }
+
+        /* ใช้ ::before เพื่อกำหนดข้อความเริ่มต้น */
+        .box2::before {
+            content: "Age";
+        }
+
+        /* เปลี่ยนข้อความเมื่อ hover */
+        .box2:hover::before {
+            content: "are you in there";
+        }
+        .box3 {
+            width: 30%;
+            height: 50px;
+            background: pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            transition: width 1s;
+            -moz-transition: width 1s; /* Firefox 4 */
+            -webkit-transition: width 1s; /* Safari and Chrome */
+            -o-transition: width 1s; /* Opera */
+        }
+
+        .box3:hover {
+            width: 100%;
+        }
+
+        /* ใช้ ::before เพื่อกำหนดข้อความเริ่มต้น */
+        .box3::before {
+            content: "Education";
+        }
+
+        /* เปลี่ยนข้อความเมื่อ hover */
+        .box3:hover::before {
+            content: "are you in there";
+        }
+        .box4 {
+            width: 40%;
+            height: 50px;
+            background: pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            transition: width 1s;
+            -moz-transition: width 1s; /* Firefox 4 */
+            -webkit-transition: width 1s; /* Safari and Chrome */
+            -o-transition: width 1s; /* Opera */
+        }
+
+        .box4:hover {
+            width: 100%;
+        }
+
+        /* ใช้ ::before เพื่อกำหนดข้อความเริ่มต้น */
+        .box4::before {
+            content: "Free-time";
+        }
+
+        /* เปลี่ยนข้อความเมื่อ hover */
+        .box4:hover::before {
+            content: "are you in there";
+        }
+        .box5 {
+            width: 50%;
+            height: 50px;
+            background: pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            transition: width 1s;
+            -moz-transition: width 1s; /* Firefox 4 */
+            -webkit-transition: width 1s; /* Safari and Chrome */
+            -o-transition: width 1s; /* Opera */
+        }
+
+        .box5:hover {
+            width: 100%;
+    
+        }
+
+        /* ใช้ ::before เพื่อกำหนดข้อความเริ่มต้น */
+        .box5::before {
+            content: "Mindset";
+            
+        }
+
+        /* เปลี่ยนข้อความเมื่อ hover */
+        .box5:hover::before {
+            content: "are you in there";
+        }
+
+
     </style>
 </head>
 <body>
+    
+<header>
+    <h1>Hi this is my test website. I do it for fun! Enjoy ur time<3</h1>
+</header>
 
-    <div class="container">
-        <header class="header">
-            <h1>ตัวอย่างเว็บไซต์ของเรา</h1>
-        </header>
+<nav>
+    <a href="#">หน้าแรก</a>
+    <a href="#">เกี่ยวกับเรา</a>
+    <a href="#">บริการ</a>
+    <a href="#">ติดต่อ</a>
+</nav>
 
-        <section class="content">
-            <div class="box">
-                <h2>บล็อกที่ 1</h2>
-                <p>เนื้อหาภายในบล็อกนี้สามารถใส่ข้อมูลต่างๆ เช่น ข้อความ รูปภาพ หรือข้อมูลอื่นๆ ตามต้องการ.</p>
-            </div>
+<main>
+    <h2>My data imformation</h2>
+    <p>นี่คือตัวอย่างเว็บไซต์ที่สร้างด้วย HTML ครับ.</p>
+    <p>คุณสามารถปรับแต่งเว็บไซต์นี้ตามความต้องการของคุณได้!</p>
+    <p>This example does not work in Internet Explorer. </p>
 
-            <div class="box">
-                <h2>บล็อกที่ 2</h2>
-                <p>เนื้อหาภายในบล็อกนี้สามารถใส่ข้อมูลต่างๆ เช่น ข้อความ รูปภาพ หรือข้อมูลอื่นๆ ตามต้องการ.</p>
-            </div>
+    <div class="box1" ></div>
+    <!-- เพิ่ม <div> ที่จะมีข้อความแสดงเมื่อวางเมาส์ -->
+    <div class="box2" ></div>
+    <div class="box3" ></div>
+    <div class="box4" ></div>
+    <div class="box5" ></div>
+</main>
 
-            <div class="box">
-                <h2>บล็อกที่ 3</h2>
-                <p>เนื้อหาภายในบล็อกนี้สามารถใส่ข้อมูลต่างๆ เช่น ข้อความ รูปภาพ หรือข้อมูลอื่นๆ ตามต้องการ.</p>
-            </div>
-
-            <div class="box">
-                <h2>บล็อกที่ 4</h2>
-                <p>เนื้อหาภายในบล็อกนี้สามารถใส่ข้อมูลต่างๆ เช่น ข้อความ รูปภาพ หรือข้อมูลอื่นๆ ตามต้องการ.</p>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <p>&copy; 2025 ตัวอย่างเว็บไซต์ของเรา</p>
-        </footer>
-    </div>
-
-    <script>
-        // JavaScript สำหรับการใช้งานต่างๆ
-        console.log('เว็บไซต์โหลดเรียบร้อยแล้ว!');
-    </script>
+<footer>
+    <p>© 2025 BB WEBSITE</p>
+</footer>
 
 </body>
 </html>
