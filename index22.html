@@ -203,12 +203,34 @@
         .box5:hover::before {
             content: "are you in there";
         }
+   /* เมื่อมีการคลิกหรือสัมผัส */
+   .box5.clicked {
+            width: 100%;
+        }
 
+        .box5.clicked::before {
+            content: "are you in there";
+        }
 
     </style>
 </head>
 <body>
     
+    <div class="box5" id="box5">Mindset</div>
+
+    <script>
+        const box = document.getElementById('box5');
+
+        // การจับเหตุการณ์คลิกบนกล่อง
+        box.addEventListener('click', function() {
+            box.classList.toggle('clicked'); // เปลี่ยนสถานะเมื่อคลิก
+        });
+
+        // การจับเหตุการณ์สัมผัสบนมือถือ (Touch Event)
+        box.addEventListener('touchstart', function() {
+            box.classList.toggle('clicked'); // เปลี่ยนสถานะเมื่อแตะ
+        });
+    </script>
 <header>
     <h1>Hi this is my test website. I do it for fun! Enjoy ur time<3</h1>
 </header>
