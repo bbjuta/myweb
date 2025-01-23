@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่าง HTML คล้ายในเว็บไซต์</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 48%;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>ตัวอย่างเว็บไซต์ของเรา</h1>
+        </header>
+
+        <section class="content">
+            <div class="box">
+                <h2>บล็อกที่ 1</h2>
+                <p>เนื้อหาภายในบล็อกนี้สามารถใส่ข้อมูลต่างๆ เช่น ข้อความ รูปภาพ หรือข้อมูลอื่นๆ ตามต้องการ.</p>
+            </div>
+
+            <div class="box">
+                <h2>บล็อกที่ 2</h2>
+                <p>เนื้อหาภายในบล็อกนี้สามารถใส่ข้อมูลต่างๆ เช่น ข้อความ รูปภาพ หรือข้อมูลอื่นๆ ตามต้องการ.</p>
+            </div>
+
+            <div class="box">
+                <h2>บล็อกที่ 3</h2>
+                <p>เนื้อหาภายในบล็อกนี้สามารถใส่ข้อมูลต่างๆ เช่น ข้อความ รูปภาพ หรือข้อมูลอื่นๆ ตามต้องการ.</p>
+            </div>
+
+            <div class="box">
+                <h2>บล็อกที่ 4</h2>
+                <p>เนื้อหาภายในบล็อกนี้สามารถใส่ข้อมูลต่างๆ เช่น ข้อความ รูปภาพ หรือข้อมูลอื่นๆ ตามต้องการ.</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2025 ตัวอย่างเว็บไซต์ของเรา</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript สำหรับการใช้งานต่างๆ
+        console.log('เว็บไซต์โหลดเรียบร้อยแล้ว!');
+    </script>
+
+</body>
+</html>
