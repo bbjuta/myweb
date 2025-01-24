@@ -10,9 +10,6 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
         header {
             background-color: #78AAC3;
@@ -31,7 +28,6 @@
             margin: 0 15px;
         }
         main {
-            flex-grow: 1;
             padding: 20px;
         }
         footer {
@@ -39,12 +35,20 @@
             color: white;
             text-align: center;
             padding: 10px;
-            position: relative;
+            position: fixed;
             width: 100%;
+            bottom: 0;
         }
 
         /* กำหนดรูปแบบของ <div> */
-        .box1, .box2, .box3, .box4, .box5 {
+            html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .box1 {
+            width: 10%;
+            height: 50px;
             background: pink;
             display: flex;
             align-items: center;
@@ -54,49 +58,138 @@
             color: black;
             font-weight: bold;
             transition: width 1s;
-            -moz-transition: width 1s;
-            -webkit-transition: width 1s;
-            -o-transition: width 1s;
+            -moz-transition: width 1s; /* Firefox 4 */
+            -webkit-transition: width 1s; /* Safari and Chrome */
+            -o-transition: width 1s; /* Opera */
         }
 
-        .box1 {
-            width: 10%;
-            height: 50px;
+        .box1:hover {
+            width: 100%;
+        
+
         }
-        .box2 {
+
+        /* ใช้ ::before เพื่อกำหนดข้อความเริ่มต้น */
+        .box1::before {
+            content: "Name";
+        }
+
+        /* เปลี่ยนข้อความเมื่อ hover */
+        .box1:hover::before {
+            content: "are you in there";
+        }
+
+        
+        /* กำหนดรูปแบบของ <div> */
+            .box2 {
             width: 20%;
-            height: 30%;
+            height: 500%;
+            background: pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            transition: width 1s;
+            -moz-transition: width 1s; /* Firefox 4 */
+            -webkit-transition: width 1s; /* Safari and Chrome */
+            -o-transition: width 1s; /* Opera */
+        }
+
+        .box2:hover {
+            width: 100%;
+        }
+
+        /* ใช้ ::before เพื่อกำหนดข้อความเริ่มต้น */
+        .box2::before {
+            content: "Age";
+        }
+
+        /* เปลี่ยนข้อความเมื่อ hover */
+        .box2:hover::before {
+            content: "are you in there";
         }
         .box3 {
             width: 30%;
             height: 50px;
+            background: pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            transition: width 1s;
+            -moz-transition: width 1s; /* Firefox 4 */
+            -webkit-transition: width 1s; /* Safari and Chrome */
+            -o-transition: width 1s; /* Opera */
+        }
+
+        .box3:hover {
+            width: 100%;
+        }
+
+        /* ใช้ ::before เพื่อกำหนดข้อความเริ่มต้น */
+        .box3::before {
+            content: "Education";
+        }
+
+        /* เปลี่ยนข้อความเมื่อ hover */
+        .box3:hover::before {
+            content: "are you in there";
         }
         .box4 {
             width: 40%;
             height: 50px;
+            background: pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            transition: width 1s;
+            -moz-transition: width 1s; /* Firefox 4 */
+            -webkit-transition: width 1s; /* Safari and Chrome */
+            -o-transition: width 1s; /* Opera */
+        }
+
+        .box4:hover {
+            width: 100%;
+        }
+
+        /* ใช้ ::before เพื่อกำหนดข้อความเริ่มต้น */
+        .box4::before {
+            content: "Free-time";
+        }
+
+        /* เปลี่ยนข้อความเมื่อ hover */
+        .box4:hover::before {
+            content: "are you in there";
         }
         .box5 {
             width: 50%;
             height: 50px;
-            transition: width 1s; /* เพิ่ม transition สำหรับการขยาย/ย่อ */
-        }
+            background: pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            transition: width 1s;
+            -moz-transition: width 1s; /* Firefox 4 */
+            -webkit-transition: width 1s; /* Safari and Chrome */
+            -o-transition: width 1s; /* Opera */
+        } 
 
-        /* Hover effect */
-        .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover {
-            width: 100%;
-        }
 
-        .box1::before, .box2::before, .box3::before, .box4::before, .box5::before {
-            content: "Name";
-        }
-
-        .box1:hover::before { content: "are you in there"; }
-        .box2:hover::before { content: "are you in there"; }
-        .box3:hover::before { content: "are you in there"; }
-        .box4:hover::before { content: "are you in there"; }
-        .box5:hover::before { content: "are you in there"; }
-
-        /* เมื่อมีการคลิกหรือสัมผัส */
+          /* เมื่อมีการคลิกหรือสัมผัส */
         .box5.clicked {
             width: 100%;
         }
@@ -107,14 +200,35 @@
             content: "are you in there";
         }
 
+          /* เมื่อเมาส์วางอยู่บนกล่อง (hover) */
+        .box5:hover {
+        width: 100%; /* ขยายขนาดเมื่อเมาส์วาง */
+        }
+        .box5::before {
+            content: "Mindset";
+        }
+        .box5.hover::before {
+            content: "are you in there";
+        }
+
+    /* ทำให้พื้นหลังเปลี่ยนเมื่อ hover */
+        .box5:hover {
+        background-color: #4D7D99; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+        }
+
+    /* เมื่อเมาส์วางอยู่บนกล่องที่ถูกคลิก */
+        .box5.clicked:hover {
+        background-color: #336C8C; /* เปลี่ยนสีพื้นหลังเมื่อ hover และมีการคลิก */
+        }
         /* ทำให้ box5 อยู่ข้างล่างสุด */
         .box5 {
             margin-top: auto;
         }
+
     </style>
 </head>
 <body>
-
+    
 <header>
     <h1>Hi this is my test website. I do it for fun! Enjoy ur time<3</h1>
 </header>
@@ -132,11 +246,13 @@
     <p>คุณสามารถปรับแต่งเว็บไซต์นี้ตามความต้องการของคุณได้!</p>
     <p>This example does not work in Internet Explorer. </p>
 
-    <div class="box1"></div>
-    <div class="box2"></div>
-    <div class="box3"></div>
-    <div class="box4"></div>
-
+    <div class="box1" ></div>
+    <!-- เพิ่ม <div> ที่จะมีข้อความแสดงเมื่อวางเมาส์ -->
+    <div class="box2" ></div>
+    <div class="box3" ></div>
+    <div class="box4" ></div>
+   
+    
     <!-- Box 5 อยู่ข้างล่างสุด -->
     <div class="box5" id="box5"></div>
     
@@ -153,7 +269,7 @@
     box.addEventListener('click', function() {
         box.classList.toggle('clicked'); // สลับสถานะการคลิก (ขยาย / ย่อ)
     });
-</script>
+</script> 
 
 </body>
 </html>
