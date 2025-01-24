@@ -190,40 +190,24 @@
 
 
           /* เมื่อมีการคลิกหรือสัมผัส */
-        .box5.clicked {
-            width: 100%;
-        }
-        .box5::before {
-            content: "Mindset";
-        }
-        .box5.clicked::before {
-            content: "are you in there";
-        }
+          .box5.clicked {
+        width: 100%; /* ขยายขนาดเมื่อคลิกครั้งแรก */
+    }
 
-          /* เมื่อเมาส์วางอยู่บนกล่อง (hover) */
-        .box5:hover {
-        width: 100%; /* ขยายขนาดเมื่อเมาส์วาง */
-        }
-        .box5::before {
-            content: "Mindset";
-        }
-        .box5.hover::before {
-            content: "are you in there";
-        }
+    /* ข้อความเริ่มต้น */
+    .box5::before {
+        content: "Mindset"; 
+    }
 
-    /* ทำให้พื้นหลังเปลี่ยนเมื่อ hover */
-        .box5:hover {
-        background-color: #4D7D99; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
-        }
+    /* ข้อความที่เปลี่ยนหลังจากคลิก */
+    .box5.clicked::before {
+        content: "are you in there"; /* ข้อความเมื่อคลิก */
+    }
 
-    /* เมื่อเมาส์วางอยู่บนกล่องที่ถูกคลิก */
-        .box5.clicked:hover {
-        background-color: #336C8C; /* เปลี่ยนสีพื้นหลังเมื่อ hover และมีการคลิก */
-        }
-        /* ทำให้ box5 อยู่ข้างล่างสุด */
-        .box5 {
-            margin-top: auto;
-        }
+    /* การตั้งค่า transition ให้ขยายและย่อขนาดอย่างราบรื่น */
+    .box5.clicked {
+        background-color: #4D7D99; /* สีพื้นหลังเมื่อคลิก */
+    }
 
     </style>
 </head>
