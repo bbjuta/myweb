@@ -48,14 +48,14 @@
 
         .box1 {
             width: 10%;
-            height: 50px;
-            background: pink;
+            height: 70px;
+            background: #94f3f8;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            font-size: 18px;
-            color: black;
+            font-size: 1rem;
+            color: #0000CD;
             font-weight: bold;
             transition: width 1s;
             -moz-transition: width 1s; /* Firefox 4 */
@@ -63,33 +63,37 @@
             -o-transition: width 1s; /* Opera */
         }
 
-        .box1:hover {
-            width: 100%;
-        
+        /* เมื่อมีการคลิกหรือสัมผัส */
+   .box1.clicked {
+        width: 100%; /* ขยายขนาดเมื่อคลิกครั้งแรก */
+    }
 
-        }
+    /* ข้อความเริ่มต้น */
+    .box1::before {
+        content: "MY NAME"; 
+    }
 
-        /* ใช้ ::before เพื่อกำหนดข้อความเริ่มต้น */
-        .box1::before {
-            content: "Name";
-        }
+    /* ข้อความที่เปลี่ยนหลังจากคลิก */
+    .box1.clicked::before {
+        content: "Hi. My name's jutamanee singrueng. Feel free to call me BB! ntmy<3"; /* ข้อความเมื่อคลิก */
+    }
 
-        /* เปลี่ยนข้อความเมื่อ hover */
-        .box1:hover::before {
-            content: "are you in there";
-        }
+    /* การตั้งค่า transition ให้ขยายและย่อขนาดอย่างราบรื่น */
+    .box1.clicked {
+        background: #f894d7;
+    }
 
         
         /* กำหนดรูปแบบของ <div> */
             .box2 {
             width: 20%;
-            height: 500%;
-            background: pink;
+            height: 70px;
+            background: #7af0f7;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            font-size: 18px;
+            font-size: 1rem;
             color: black;
             font-weight: bold;
             transition: width 1s;
@@ -97,29 +101,35 @@
             -webkit-transition: width 1s; /* Safari and Chrome */
             -o-transition: width 1s; /* Opera */
         }
+ /* เมื่อมีการคลิกหรือสัมผัส */
+ .box2.clicked {
+        width: 100%; /* ขยายขนาดเมื่อคลิกครั้งแรก */
+    }
 
-        .box2:hover {
-            width: 100%;
-        }
+    /* ข้อความเริ่มต้น */
+    .box2::before {
+        content: "AGE"; 
+    }
 
-        /* ใช้ ::before เพื่อกำหนดข้อความเริ่มต้น */
-        .box2::before {
-            content: "Age";
-        }
+    /* ข้อความที่เปลี่ยนหลังจากคลิก */
+    .box2.clicked::before {
+        content: "I was born on September 10th, 2004. At present, I have reached the age of 20. (ฺํBY 2025)"; /* ข้อความเมื่อคลิก */
+    }
 
-        /* เปลี่ยนข้อความเมื่อ hover */
-        .box2:hover::before {
-            content: "are you in there";
-        }
+    /* การตั้งค่า transition ให้ขยายและย่อขนาดอย่างราบรื่น */
+    .box2.clicked {
+        background: #f77adc;
+    }
+
         .box3 {
             width: 30%;
-            height: 50px;
-            background: pink;
+            height: 70px;
+            background: #6fedf4;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            font-size: 18px;
+            font-size: 1rem;
             color: black;
             font-weight: bold;
             transition: width 1s;
@@ -127,29 +137,35 @@
             -webkit-transition: width 1s; /* Safari and Chrome */
             -o-transition: width 1s; /* Opera */
         }
+ /* เมื่อมีการคลิกหรือสัมผัส */
+ .box3.clicked {
+        width: 100%; /* ขยายขนาดเมื่อคลิกครั้งแรก */
+    }
 
-        .box3:hover {
-            width: 100%;
-        }
+    /* ข้อความเริ่มต้น */
+    .box3::before {
+        content: "Education"; 
+    }
 
-        /* ใช้ ::before เพื่อกำหนดข้อความเริ่มต้น */
-        .box3::before {
-            content: "Education";
-        }
+    /* ข้อความที่เปลี่ยนหลังจากคลิก */
+    .box3.clicked::before {
+        content: "I am currently pursuing my studies at RMUTK University, specializing in Business Administration with a focus on Information Technology and Digital Business, as part of a four-year program."; /* ข้อความเมื่อคลิก */
+    }
 
-        /* เปลี่ยนข้อความเมื่อ hover */
-        .box3:hover::before {
-            content: "are you in there";
-        }
+    /* การตั้งค่า transition ให้ขยายและย่อขนาดอย่างราบรื่น */
+    .box3.clicked {
+        background-color: #f46fe2; /* สีพื้นหลังเมื่อคลิก */
+    }
+
         .box4 {
             width: 40%;
-            height: 50px;
-            background: pink;
+            height: 70px;
+            background: #46eff8;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            font-size: 18px;
+            font-size: 1rem;
             color: black;
             font-weight: bold;
             transition: width 1s;
@@ -157,29 +173,36 @@
             -webkit-transition: width 1s; /* Safari and Chrome */
             -o-transition: width 1s; /* Opera */
         }
+   /* เมื่อมีการคลิกหรือสัมผัส */
+   .box4.clicked {
+        width: 100%; /* ขยายขนาดเมื่อคลิกครั้งแรก */
+    }
 
-        .box4:hover {
-            width: 100%;
-        }
+    /* ข้อความเริ่มต้น */
+    .box4::before {
+        content: "Passionate"; 
+    }
 
-        /* ใช้ ::before เพื่อกำหนดข้อความเริ่มต้น */
-        .box4::before {
-            content: "Free-time";
-        }
+    /* ข้อความที่เปลี่ยนหลังจากคลิก */
+    .box4.clicked::before {
+        content: "I am interested in studying data, including SQL, database management, data analytics, and data science, and aim to enhance my expertise through deep learning in the future.";
+        /* ข้อความเมื่อคลิก */
+    }
 
-        /* เปลี่ยนข้อความเมื่อ hover */
-        .box4:hover::before {
-            content: "are you in there";
-        }
+    /* การตั้งค่า transition ให้ขยายและย่อขนาดอย่างราบรื่น */
+    .box4.clicked {
+        background: #f546f8;
+    }
+
         .box5 {
             width: 50%;
-            height: 50px;
-            background: pink;
+            height: 70px;
+            background: #12edf8;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            font-size: 18px;
+            font-size: 1rem;
             color: black;
             font-weight: bold;
             transition: width 1s;
@@ -196,17 +219,17 @@
 
     /* ข้อความเริ่มต้น */
     .box5::before {
-        content: "Mindset"; 
+        content: "Inspiration"; 
     }
 
     /* ข้อความที่เปลี่ยนหลังจากคลิก */
     .box5.clicked::before {
-        content: "are you in there"; /* ข้อความเมื่อคลิก */
+        content: "Job Natdhanai :)"; /* ข้อความเมื่อคลิก */
     }
 
     /* การตั้งค่า transition ให้ขยายและย่อขนาดอย่างราบรื่น */
     .box5.clicked {
-        background-color: #4D7D99; /* สีพื้นหลังเมื่อคลิก */
+        background: #f812d9;
     }
 
     </style>
@@ -230,30 +253,37 @@
     <p>คุณสามารถปรับแต่งเว็บไซต์นี้ตามความต้องการของคุณได้!</p>
     <p>This example does not work in Internet Explorer. </p>
 
-    <div class="box1" ></div>
-    <!-- เพิ่ม <div> ที่จะมีข้อความแสดงเมื่อวางเมาส์ -->
-    <div class="box2" ></div>
-    <div class="box3" ></div>
-    <div class="box4" ></div>
+    <div class="box1" id="box1"></div>
+    <div class="box2" id="box2"></div>
+    <div class="box3" id="box3"></div>
+
    
-    
+    <div class="box4" id="box4"></div>
     <!-- Box 5 อยู่ข้างล่างสุด -->
     <div class="box5" id="box5"></div>
-    
+
+
+
+    <br> <br> <br> <br> 
+
 </main>
 
 <footer>
+
     <p>© 2025 BB WEBSITE</p>
 </footer>
-
 <script>
-    const box = document.getElementById('box5');
+    // เลือกกล่องทั้งหมดจาก box1 ถึง box5
+    const boxes = document.querySelectorAll('#box1, #box2, #box3, #box4, #box5');
 
     // การจับเหตุการณ์คลิกบนกล่อง
-    box.addEventListener('click', function() {
-        box.classList.toggle('clicked'); // สลับสถานะการคลิก (ขยาย / ย่อ)
+    boxes.forEach(function(box) {
+        box.addEventListener('click', function() {
+            box.classList.toggle('clicked'); // สลับสถานะการคลิก (ขยาย / ย่อ)
+        });
     });
-</script> 
+</script>
+
 
 </body>
 </html>
